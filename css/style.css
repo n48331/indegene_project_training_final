@@ -1,0 +1,336 @@
+:root {
+    /* colors */
+    --white: #FFFFFF;
+    --black: #000000;
+    --nav-link: #1C4961;
+    --nav-link-fs: 30px;
+    --blue-1: #F1FAFF;
+    --footer-blue: #E1E8F8;
+    /* Text */
+    --bold: 700;
+    --semibold: 600;
+    --regular: 400;
+    --h-fs: 70px;
+    --banner-h: 60px;
+    --banner-p: 25px;
+    --hero-h: 30px;
+    --hero-fs: 25px;
+    --dest-fs: 26px;
+    --dest-h: 38px;
+    --blog-h: 50px;
+    --footer-fs: 24px;
+    /* width */
+    --section-width: 90%;
+
+
+
+
+
+
+}
+
+/*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font-family: proxima-nova, sans-serif;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+img,
+span,
+input,
+button {
+    display: block;
+}
+
+input,
+button {
+    border: none;
+    background: none;
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*-----------------------------------*\
+    #HEADER
+  \*-----------------------------------*/
+
+.header {
+    margin: 0px 50px;
+    background: var(--white);
+    height: 88px;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+.header.active {
+    height: 300px;
+    transition-duration: 0.35s;
+}
+
+.header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.nav-toggle-btn.active .open,
+.nav-toggle-btn .close {
+    display: none;
+}
+
+.nav-toggle-btn .open,
+.nav-toggle-btn.active .close {
+    display: block;
+}
+
+
+.navbar {
+    width: 100%;
+    padding: 20px 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.15s ease;
+}
+
+.header.active .navbar {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.navbar-link {
+    color: var(--nav-link);
+    opacity: 75%;
+    font-size: var(--nav-link-fs);
+    padding-block: 10px 0;
+    border-bottom: 2px solid transparent;
+    width: max-content;
+}
+
+.navbar-link:is(:hover, :focus) {
+    border-color: var(--nav-link);
+    font-weight: var(--semibold);
+    opacity: 1;
+}
+
+.section {
+    /* margin: 10px 50px; */
+    width: var(--section-width);
+    margin: 0 auto;
+}
+
+/* hero */
+.hero {
+    position: relative;
+}
+
+.hero .banner__content {}
+
+.hero {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/hero-bg.png");
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 150px;
+    height: 600px;
+    color: var(--white);
+}
+
+.hero .banner__content h1 {
+    font-size: var(--banner-h);
+    font-weight: var(--bold);
+}
+
+.hero .banner__content p {
+    font-size: var(--banner-p);
+
+}
+
+.hero .hero__cards {
+    width: 100%;
+
+}
+
+.hero .hero__cards div {
+    float: left;
+    border: 2px solid pink;
+    margin: 0 10px;
+    width: 23%;
+    background-color: #1C4961;
+    height: 300px;
+    margin-top: 100px;
+
+}
+
+/* go to top */
+.go-top {
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    background: aquamarine;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.15s ease;
+}
+
+.go-top.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-15px);
+}
+
+.go-top:is(:hover, :focus) {
+    transform: translateY(-25px);
+}
+
+
+
+
+
+/*-----------------------------------*\
+    #RESPONSIVE
+  \*-----------------------------------*/
+
+/**
+   * responsive for larger than 575px screen 
+   */
+
+@media (min-width: 575px) {}
+
+
+
+
+
+/**
+   * responsive for larger than 768px screen 
+   */
+
+@media (min-width: 768px) {
+
+    /**
+     * REUSED STYLE
+     */
+
+
+}
+
+
+
+
+
+/**
+   * responsive for larger than 992px screen 
+   */
+
+@media (min-width: 992px) {
+
+
+
+
+    /**
+     * HEADER
+     */
+
+    .nav-toggle-btn {
+        display: none;
+    }
+
+    .header,
+    .header.active {
+        height: unset;
+    }
+
+    .navbar {
+        all: unset;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .navbar-list {
+        margin-bottom: 0;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .navbar-link {
+        font-weight: var(--fw-700);
+        margin-bottom: 8px;
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+/**
+   * responsive for larger than 1200px screen 
+   */
+
+@media (min-width: 1200px) {
+
+
+
+
+
+
+    /**
+     * HEADER
+     */
+
+    .navbar-list {
+        gap: 50px;
+    }
+
+
+
+
+}

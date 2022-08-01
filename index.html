@@ -6,14 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mfr2dox.css">
     <title>Travelo</title>
 </head>
 
 <body>
-    <header>
-        <nav></nav>
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#">
+                <div class="logo">
+                    <img src="./images/logo.svg" alt="logo">
+                </div>
+            </a>
+
+            <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+                <span name="menu-outline" class="open">open</span>
+                <span name="close-outline" class="close">close</span>
+            </button>
+
+            <nav class="navbar">
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="#" class="navbar-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link">Contact</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
     </header>
-    <main></main>
+    <main>
+        <section class="section hero">
+            <div class="banner__img"></div>
+            <div class="banner__content">
+                <h1>Travel To explore</h1>
+                <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore
+                    Et Dolore Magna Aliqua. Ultricies Mi Eget Mauris Pharetra. Amet Risus Nullam Eget Felis Eget Nunc
+                    Lobortis. Purus In Massa Tempor Nec. Porta Nibh Venenatis Cras Sed. Viverra Ipsum Nunc Aliquet
+                    Bibendum Enim. Risus Pretium Quam Vulputate Dignissim Suspendisse In. </p>
+            </div>
+            <div class="hero__cards">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+
+    </main>
     <footer></footer>
     <script src="./js/script.js"></script>
 </body>
