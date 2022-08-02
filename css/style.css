@@ -13,19 +13,16 @@
     --h-fs: 70px;
     --banner-h: 60px;
     --banner-p: 25px;
-    --hero-h: 30px;
-    --hero-fs: 25px;
-    --dest-fs: 26px;
+    --hero-h: 24px;
+    --hero-fs: 18px;
+    --dest-fs: 22px;
     --dest-h: 38px;
     --blog-h: 50px;
     --footer-fs: 24px;
     /* width */
     --section-width: 90%;
-
-
-
-
-
+    --border: 2px solid;
+    --center: 0 auto;
 
 }
 
@@ -78,72 +75,31 @@ html {
     scroll-behavior: smooth;
 }
 
+.section-spacer {
+    margin: 100px;
+}
+
 /*-----------------------------------*\
     #HEADER
   \*-----------------------------------*/
 
-.header {
-    margin: 0px 50px;
-    background: var(--white);
-    height: 88px;
-    overflow: hidden;
-    transition: 0.25s ease;
-}
-
-.header.active {
-    height: 300px;
-    transition-duration: 0.35s;
-}
-
-.header .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
 
 
 
-.nav-toggle-btn.active .open,
-.nav-toggle-btn .close {
-    display: none;
-}
-
-.nav-toggle-btn .open,
-.nav-toggle-btn.active .close {
-    display: block;
-}
-
-
-.navbar {
-    width: 100%;
-    padding: 20px 10px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.15s ease;
-}
-
-.header.active .navbar {
-    opacity: 1;
-    visibility: visible;
-}
-
-
-
-.navbar-link {
+/* .navbar-link {
     color: var(--nav-link);
     opacity: 75%;
     font-size: var(--nav-link-fs);
     padding-block: 10px 0;
     border-bottom: 2px solid transparent;
     width: max-content;
-}
+} */
 
-.navbar-link:is(:hover, :focus) {
+/* .navbar-link:is(:hover, :focus) {
     border-color: var(--nav-link);
     font-weight: var(--semibold);
     opacity: 1;
-}
+} */
 
 .section {
     /* margin: 10px 50px; */
@@ -156,17 +112,17 @@ html {
     position: relative;
 }
 
-.hero .banner__content {}
 
 .hero {
-    width: 100%;
+    width: 95%;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/hero-bg.png");
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 150px;
-    height: 600px;
+    padding: 150px 50px;
     color: var(--white);
+    border-radius: 10px;
+    margin: 0 auto;
 }
 
 .hero .banner__content h1 {
@@ -186,151 +142,431 @@ html {
 
 .hero .hero__cards div {
     float: left;
-    border: 2px solid pink;
-    margin: 0 10px;
+    margin: 80px 10px;
     width: 23%;
-    background-color: #1C4961;
-    height: 300px;
-    margin-top: 100px;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 30px 15px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.4);
 
 }
 
-/* go to top */
-.go-top {
-    position: fixed;
-    bottom: 0;
-    right: 15px;
-    background: aquamarine;
-    color: black;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 6px;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.15s ease;
+.hero .hero__cards div>img {
+    width: 60px;
+    margin: 0 auto;
 }
 
-.go-top.active {
-    visibility: visible;
+.hero .hero__cards div>h3 {
+    font-size: var(--hero-h);
+    font-weight: var(--semibold);
+}
+
+.hero .hero__cards div>p {
+    font-size: var(--hero-fs);
+}
+
+/* destination */
+.destination {
+    background-color: var(--blue-1);
+    overflow: auto;
+    width: 100%;
+    padding: 80px 50px;
+}
+
+.destination>h1 {
+    font-size: var(--h-fs);
+    text-align: center;
+}
+
+
+.destination>.tabs {
+    width: 90%;
+    margin: 80px auto;
+    overflow: auto;
+}
+
+.destination>.tabs>a {
+    font-size: var(--dest-fs);
+    float: left;
+    width: 25%;
+
+    text-align: center;
+    color: var(--black);
+    opacity: 75%;
+    border-bottom: 1.5px solid rgba(128, 128, 128, 0.52);
+}
+
+.destination>.tabs>a:is(:hover, :focus) {
+    border-color: var(--black);
+    border-width: 5px;
+    font-weight: var(--semibold);
     opacity: 1;
-    transform: translateY(-15px);
 }
 
-.go-top:is(:hover, :focus) {
-    transform: translateY(-25px);
+.destination>.cards {
+    margin: var(--center);
+}
+
+.destination>.cards>.card {
+    width: 32%;
+    float: left;
+    margin: 20px .6%;
+
+}
+
+.destination>.cards>.card>h3 {
+    font-size: var(--dest-fs);
+    margin-top: 20px;
+    ;
+
+}
+
+.destination>.cards>.card>img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.4);
+
+}
+
+.destination>.cards>.card>p {
+    font-size: 15px;
+    margin-top: 15px;
+
+}
+
+.destination>.cards>.card>.options {
+    width: 100%;
+
+}
+
+.destination>.cards>.card>.options>.services {
+    width: 50%;
+    float: left;
+
+}
+
+.destination>.cards>.card>.options>.services>span {
+    width: 100%;
+    display: inline-block;
+
+}
+
+.destination>.cards>.card>.options>.services>div {
+    display: inline-block;
+}
+
+.destination>.cards>.card>.options>.services>div>img {
+    width: 20px;
+    float: left;
+    margin: 3px;
+}
+
+
+.destination>.cards>.card>.options>.prize {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.destination>.cards>.card>.options>.prize>span:nth-child(1) {
+
+    font-size: 18px;
+    font-weight: var(--semibold);
+}
+
+.destination>.cards>.card>.options>.prize>span:nth-child(2),
+.destination>.cards>.card>.options>.services>span {
+    font-size: 12px;
+}
+
+/* blogs */
+.blogs .blogs__grid {
+    width: 90%;
+    height: auto;
+    margin: 80px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "blog1 blog2"
+        "blog1  blog3";
+
+}
+
+.blogs>h1 {
+    font-size: var(--h-fs);
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.blogs .blog__1,
+.blogs .blog__2,
+.blogs .blog__3 {
+    display: block;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/hero-bg.png");
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+
+}
+
+.blogs .blog__1>p,
+.blogs .blog__2>p,
+.blogs .blog__3>p {
+    color: var(--white);
+    font-size: 30px;
+    font-weight: var(--bold);
+}
+
+.blogs .blog__2,
+.blogs .blog__3 {
+    padding: 64px 80px;
+}
+
+.blogs .blog__1 {
+    /* width: 55%; */
+    grid-area: blog1;
+    padding: 180px 80px;
 }
 
 
 
+.blogs .blog__3 {
 
+    grid-area: blog3;
+
+}
+
+.blogs .blog__2 {
+    grid-area: blog2;
+
+}
+
+/* Happy customers */
+.customers {
+    width: 100%;
+
+}
+
+.customers>h1 {
+    font-size: var(--h-fs);
+    text-align: center;
+    margin: 80px 0;
+}
+
+.customers>.content {
+
+    background: url("../images/customer_1.jpg");
+}
+
+.customers>.content>.desc {
+    background-color: #ffffffac;
+    width: 50%;
+    position: relative;
+    padding: 170px 30px 170px 57px;
+}
+
+.customers>.content>.desc>p {
+    font-size: 26px;
+    margin: 0 auto;
+}
+
+.customers>.content>.desc>.quote {
+    width: 53px;
+}
+
+.customers>.content>.desc>.user {
+    width: 100%;
+    margin: 20px 0 70px 0;
+
+}
+
+.customers>.content>.desc>.user>img {
+    width: 8%;
+    float: left;
+
+}
+
+
+.customers>.content>.desc>.user p {
+
+    float: left;
+    width: 60%;
+    margin-left: 15px;
+}
 
 /*-----------------------------------*\
     #RESPONSIVE
   \*-----------------------------------*/
+@media only screen and (max-width: 1200px) {
 
-/**
-   * responsive for larger than 575px screen 
-   */
+    /* hero */
+    .hero .hero__cards div {
+        margin: 10px;
+        width: 45%;
+        padding: 30px 15px;
 
-@media (min-width: 575px) {}
-
-
-
-
-
-/**
-   * responsive for larger than 768px screen 
-   */
-
-@media (min-width: 768px) {
-
-    /**
-     * REUSED STYLE
-     */
-
-
-}
-
-
-
-
-
-/**
-   * responsive for larger than 992px screen 
-   */
-
-@media (min-width: 992px) {
-
-
-
-
-    /**
-     * HEADER
-     */
-
-    .nav-toggle-btn {
-        display: none;
     }
 
-    .header,
-    .header.active {
-        height: unset;
+    /* destination */
+    .destination {
+        padding: 50px;
     }
 
-    .navbar {
-        all: unset;
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
+    .destination>.tabs {
+        margin: 50px auto;
     }
 
-    .navbar-list {
-        margin-bottom: 0;
-        margin-inline: auto;
-        display: flex;
-        align-items: center;
-        gap: 30px;
+    .destination>.tabs>a {
+        width: 50%;
     }
 
-    .navbar-link {
-        font-weight: var(--fw-700);
-        margin-bottom: 8px;
+    .destination>.cards>.card {
+        width: 48%;
+
     }
 
+    /* Happy customers */
 
 
+    .customers>h1 {
+        margin: 50px 0;
+    }
 
+    .customers>.content>.desc>p {
+        font-size: 24px;
+    }
 
-
+    .customers>.content>.desc>.quote {
+        width: 48px;
+    }
 
 
 
 }
 
+@media only screen and (max-width: 992px) {
+
+    /* Happy customers */
 
 
 
+    .customers>.content {
 
-/**
-   * responsive for larger than 1200px screen 
-   */
+        background: url("../images/customer_1.jpg");
+    }
 
-@media (min-width: 1200px) {
+    .customers>.content>.desc {
+        width: 50%;
+    }
+
+    .customers>.content>.desc>p {
+        font-size: 18px;
+    }
+
+    .customers>.content>.desc>.quote {
+        width: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        /* Text */
+        --h-fs: 70px;
+        --banner-h: 40px;
+        --banner-p: 26px;
+        --hero-h: 18px;
+        --hero-fs: 15px;
+        --dest-fs: 26px;
+        --dest-h: 38px;
+        --blog-h: 50px;
+        --footer-fs: 24px;
+    }
+
+    /* destination */
+    .destination {
+        padding: 30px;
+    }
 
 
+    .destination>.tabs>a {
+        width: 100%;
+    }
 
+    /* blogs */
+    .blogs .blogs__grid {
+        width: 95%;
+        margin: 50px auto;
+        gap: 15px;
+        grid-template-areas:
+            "blog1"
+            "blog1"
+            "blog2"
+            "blog3";
 
+    }
 
+    /* Happy customers */
+    .customers>.content {
+        padding-top: 400px;
+        background: url("../images/customer_1.jpg");
+    }
 
-    /**
-     * HEADER
-     */
+    .customers>.content>.desc {
+        padding: 50px 30px 50px 57px;
+        width: 100%;
+    }
 
-    .navbar-list {
-        gap: 50px;
+    .customers>.content>.desc>p {
+        font-size: 18px;
+    }
+
+    .customers>.content>.desc>.quote {
+        width: 30px;
     }
 
 
 
+}
 
+@media only screen and (max-width: 575px) {
+    :root {
+        /* Text */
+        --bold: 700;
+        --semibold: 600;
+        --regular: 400;
+        --h-fs: 50px;
+        --banner-h: 42px;
+        --banner-p: 20px;
+        --hero-h: 18px;
+        --hero-fs: 15px;
+        --dest-fs: 26px;
+        --dest-h: 38px;
+        --blog-h: 50px;
+        --footer-fs: 24px;
+    }
+
+    /* hero */
+    .hero {
+        padding: 40px;
+    }
+
+    .hero .hero__cards div {
+        margin: 10px;
+        width: 100%;
+        padding: 30px;
+
+    }
+
+    /* destination */
+    .destination {
+        padding: 20px;
+    }
+
+    .destination>.cards>.card {
+        width: 100%;
+
+
+    }
 }
