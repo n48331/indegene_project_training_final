@@ -1,25 +1,25 @@
-"use strict";
-
-/**
- * navbar toggle
- */
-
-const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
-const header = document.querySelector("[data-header]");
-
-navToggleBtn.addEventListener("click", function () {
-  this.classList.toggle("active");
-  header.classList.toggle("active");
-});
-
-/**
- * show go top btn when scroll window to 500px
- */
-
-const goTopBtn = document.querySelector("[data-go-top]");
-
-window.addEventListener("scroll", function () {
-  window.scrollY >= 500
-    ? goTopBtn.classList.add("active")
-    : goTopBtn.classList.remove("active");
-});
+(function ($) {
+  // Begin jQuery
+  $(function () {
+    // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $("nav ul li a:not(:only-child)").click(function (e) {
+      $(this).siblings(".nav-dropdown").toggle();
+      // Close one dropdown when selecting another
+      $(".nav-dropdown").not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $("html").click(function () {
+      $(".nav-dropdown").hide();
+    });
+    // Toggle open and close nav styles on click
+    $("#nav-toggle").click(function () {
+      $("nav ul").slideToggle();
+    });
+    // Hamburger to X toggle
+    $("#nav-toggle").on("click", function () {
+      this.classList.toggle("active");
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
