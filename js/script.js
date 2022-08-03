@@ -81,6 +81,9 @@ function index() {
 }
 function contact() {
   // Contact US
+  $("form").submit(function () {
+    alert("Submitted");
+  });
   $(document).ready(function () {
     $("#contact__form").validate({
       errorClass: "error fail-alert",
