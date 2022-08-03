@@ -149,3 +149,23 @@ function contact() {
     });
   });
 }
+function about() {
+  function counter(id, start, end, duration) {
+    let obj = document.getElementById(id),
+      current = start,
+      range = end - start,
+      increment = end > start ? 1 : -1,
+      step = Math.abs(Math.floor(duration / range)),
+      timer = setInterval(() => {
+        current += increment;
+        obj.textContent = current;
+        if (current == end) {
+          clearInterval(timer);
+        }
+      }, step);
+  }
+  counter("walk", 0, 3241, 5000);
+  counter("plane", 0, 787, 5000);
+  counter("apartment", 0, 1203, 5000);
+  counter("ship", 5000, 9874, 5000);
+}

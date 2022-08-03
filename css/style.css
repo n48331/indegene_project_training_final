@@ -718,23 +718,34 @@ nav ul li a:is(:hover, :focus) {
     float: left;
     width: 26%;
     margin: 8px;
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
     height: 450px;
 }
 
+.team>.cards>div:hover .team>.cards>div>div {
+    padding: 80px;
+    opacity: .6;
+}
+
+
 .team>.cards>div:nth-child(1) {
     background: url("../images/team-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 .team>.cards>div:nth-child(2) {
     background: url("../images/team-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 .team>.cards>div:nth-child(3) {
     background: url("../images/team-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 .team>.cards>div>div {
@@ -745,6 +756,12 @@ nav ul li a:is(:hover, :focus) {
     color: var(--white);
     text-align: center;
     padding: 20px;
+    transition: all .6s;
+}
+
+.team>.cards>div:hover>div {
+    padding: 80px;
+    opacity: .6;
 }
 
 .team>.cards>div>div>h3 {
