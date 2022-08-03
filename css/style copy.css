@@ -215,7 +215,6 @@ nav ul li a:is(:hover, :focus) {
     color: var(--white);
     border-radius: 10px;
     margin: 100px auto;
-    transition: all .5s;
 }
 
 .hero .banner__content h1 {
@@ -237,10 +236,9 @@ nav ul li a:is(:hover, :focus) {
     float: left;
     margin: 80px 10px;
     width: 23%;
-    height: 350px;
     background-color: var(--white);
     color: var(--black);
-    padding: 40px 15px;
+    padding: 30px 15px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.4);
     transition: all .5s;
 
@@ -252,7 +250,7 @@ nav ul li a:is(:hover, :focus) {
 
 .hero .hero__cards div>img {
     width: 60px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
 .hero .hero__cards div>h3 {
@@ -334,7 +332,6 @@ nav ul li a:is(:hover, :focus) {
     overflow: hidden;
     position: relative;
     border-radius: 15px;
-    height: 260px;
 
 }
 
@@ -430,25 +427,13 @@ nav ul li a:is(:hover, :focus) {
     overflow: hidden;
     border-radius: 15px;
     transition: all 1s;
+    border: 2px solid;
+
 }
-
-
-.blogs>.blogs__grid>div:nth-child(1)>.inner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/Mount_Kilimanjaro.jpg");
-}
-
-.blogs>.blogs__grid>div:nth-child(2)>.inner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/airport.jpg");
-}
-
-.blogs>.blogs__grid>div:nth-child(3)>.inner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/woman-looking-out-plane.jpg");
-}
-
-
 
 .blogs>.blogs__grid>div>.inner {
     position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/hero-bg.png");
     background-size: cover;
     display: block;
     height: 100%;
@@ -598,7 +583,7 @@ nav ul li a:is(:hover, :focus) {
 
 .letsgo>.image {
     position: relative;
-    /* border: var(--border); */
+    border: var(--border);
 
 }
 
@@ -1055,10 +1040,6 @@ button {
         --footer-fs: 24px;
     }
 
-    .blogs .blog__1>span {
-        padding: 180px 30px;
-    }
-
     /* Happy customers */
     .customers>.content {
 
@@ -1190,10 +1171,6 @@ button {
             "blog2"
             "blog3";
 
-    }
-
-    .blogs .blog__1>span {
-        padding: 80px;
     }
 
     /* Happy customers */

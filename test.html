@@ -5,64 +5,233 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-    <style>
-        .image {
-            display: block;
-            overflow: hidden;
-            text-align: center;
-            height: 500px;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        .image .inner {
-            padding: 150px;
-            background-image: url("./images/about-image-2.jpg");
-            background-size: cover;
-            display: block;
-            transform: scale(1, 1);
-            transition: transform 0.4s;
-        }
+    <link rel="stylesheet" href="https://use.typekit.net/mfr2dox.css">
 
-        .image:hover .inner {
-            transform: scale(1.05);
-        }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        .container {
-            max-height: 500px;
-        }
-
-        .container>div {
-            float: left;
-            width: 45%;
-            border: 3px solid;
-        }
-
-        .div2>div {
-            float: left;
-            margin: 10px;
-        }
-
-        .div2>div>.image {
-            height: 220px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Travelo</title>
 </head>
 
 <body>
-    <h1>Test</h1>
-    <div class="container">
-        <div>
-            <div class="image">
-                <span class="inner">
-                    <p>The Ultimate Guide
-                        to Climbing
-                        Mount Kilimanjaro</p>
-                </span>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#!"><img src="./images/logo.svg" alt="logo"></a>
             </div>
+            <nav>
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#!"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#!">Home</a>
+                    </li>
+                    <li>
+                        <a href="./about.html" target="_blank">About</a>
+                    </li>
+
+                    <li>
+                        <a href="./contact.html" target="_blank">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div class="div2">
-            <div>
-                <div class="image">
+    </header>
+    <main>
+        <section class="section hero">
+            <div class="banner__img"></div>
+            <div class="banner__content">
+                <h1>Travel To explore</h1>
+                <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore
+                    Et Dolore Magna Aliqua. Ultricies Mi Eget Mauris Pharetra. Amet Risus Nullam Eget Felis Eget Nunc
+                    Lobortis. Purus In Massa Tempor Nec. Porta Nibh Venenatis Cras Sed. Viverra Ipsum Nunc Aliquet
+                    Bibendum Enim. Risus Pretium Quam Vulputate Dignissim Suspendisse In. </p>
+            </div>
+            <div class="hero__cards">
+                <div>
+                    <img src="./images/hero_img-1.png" alt="hero-img">
+                    <h3>Get Best Prices
+                        Guarantee </h3>
+                    <p>Pay through our application and save thousands and get amazing rewards </p>
+                </div>
+                <div>
+                    <img src="./images/hero_img-1.png" alt="hero-img">
+                    <h3>Get Best Prices
+                        Guarantee </h3>
+                    <p>Pay through our application and save thousands and get amazing rewards </p>
+                </div>
+                <div>
+                    <img src="./images/hero_img-1.png" alt="hero-img">
+                    <h3>Get Best Prices
+                        Guarantee </h3>
+                    <p>Pay through our application and save thousands and get amazing rewards </p>
+                </div>
+                <div>
+                    <img src="./images/hero_img-1.png" alt="hero-img">
+                    <h3>Get Best Prices
+                        Guarantee </h3>
+                    <p>Pay through our application and save thousands and get amazing rewards </p>
+                </div>
+            </div>
+        </section>
+        <!-- <div class="section-spacer"></div> -->
+        <section class="section destination">
+            <h1>Recommended Destination</h1>
+            <ul class="tabs">
+                <li id="default-filter" data-target="weekend">The Weekend Break</li>
+                <li data-target="package">The Package Holiday</li>
+                <li data-target="group">The Group Tour</li>
+                <li data-target="long">Long Term Slow Travel</li>
+            </ul>
+            <div class="cards">
+                <div class="card" data-item="weekend">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore0</h3>
+                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
+                        Southeast Asia.</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="weekend">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore1</h3>
+                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
+                        Southeast Asia.</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="group">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore2</h3>
+                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
+                        Southeast Asia.</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="long">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore3</h3>
+                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
+                        Southeast Asia.</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="long">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore4</h3>
+                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
+                        Southeast Asia.</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="weekend">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore5</h3>
+                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
+                        Southeast Asia.</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section blogs">
+            <h1>Blogs</h1>
+            <div class="blogs__grid">
+                <div class="blog__1">
+                    <span class="inner">
+                        <p>The Ultimate Guide
+                            to Climbing
+                            Mount Kilimanjaro</p>
+                    </span>
+                </div>
+                <div class="blog__2">
+                    <span class="inner">
+                        <p>The Ultimate Guide
+                            to Climbing
+                            Mount Kilimanjaro</p>
+                    </span>
+                </div>
+                <div class="blog__3">
                     <span class="inner">
                         <p>The Ultimate Guide
                             to Climbing
@@ -70,17 +239,67 @@
                     </span>
                 </div>
             </div>
-            <div>
-                <div class="image">
-                    <span class="inner">
-                        <p>The Ultimate Guide
-                            to Climbing
-                            Mount Kilimanjaro</p>
-                    </span>
+        </section>
+
+        <section class="section customers">
+            <h1>Happy
+                Customers</h1>
+            <div class="content">
+                <div class="desc">
+                    <img class="quote" src="./images/quote.png" alt="quote">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ultricies mi eget mauris pharetra. Amet risus nullam eget felis
+                        eget nunc lobortis. Purus in massa tempor nec. Porta nibh venenatis cras sed. Viverra ipsum nunc
+                        aliquet bibendum enim. Risus pretium quam vulputate dignissim suspendisse in. Non quam lacus
+                        suspendisse faucibus interdum posuere lorem ipsum dolor. Facilisi cras fermentum odio eu feugiat
+                        pretium nibh ipsum. Risus sed vulputate odio ut enim blandit volutpat maecenas. Netus et
+                        malesuada fames ac turpis egestas. Sed arcu non odio euismod lacinia at quis risus sed. </p>
+                    <div class="user">
+                        <img src="./images/user_1.png" alt="user">
+                        <p>Shalini Singh</p>
+                        <p>Project Manger flyhigh</p>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="copy">Copyright © 2020 Travelo. All rights reserved</div>
+        <div class="links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./about.html" target="_blank">About</a></li>
+                <li><a href="./contact.html" target="_blank">Contact</a></li>
+            </ul>
         </div>
-    </div>
+        <div class="social">
+            <ul>
+
+                <li><a id="fb" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a id="in" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a id="insta" href="#"><i class="fa-brands fa-square-instagram"></i></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        var images = ["about_hero-bg.jpg", "hero-bg.png"];
+        $(function () {
+            var i = 0;
+            $(".hero").css("background-image", "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(images/" + images[i] + ")");
+            setInterval(function () {
+                i++;
+                if (i == images.length) {
+                    i = 0;
+                }
+                // $(".hero").fadeOut("fast", function () {
+                $(".hero").css("background-image", "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(images/" + images[i] + ")");
+                // $(this).fadeIn("fast");
+                // });
+            }, 3000);
+        });
+    </script>
+    <script src="./js/script.js"></script>
+
 </body>
 
 </html>
