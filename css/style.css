@@ -240,7 +240,12 @@ nav ul li a:is(:hover, :focus) {
     color: var(--black);
     padding: 30px 15px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.4);
+    transition: all .5s;
 
+}
+
+.hero .hero__cards>div:hover {
+    transform: translateY(-50px);
 }
 
 .hero .hero__cards div>img {
@@ -419,42 +424,48 @@ nav ul li a:is(:hover, :focus) {
 .blogs .blog__1,
 .blogs .blog__2,
 .blogs .blog__3 {
-    display: block;
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/hero-bg.png");
-    text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
     border-radius: 15px;
     transition: all 1s;
+    border: 2px solid;
 
 }
 
-/* .blogs .blog__1:hover,
-.blogs .blog__2:hover,
-.blogs .blog__3:hover {
-    transform: scale(1.5);
-
+.blogs>.blogs__grid>div>.inner {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/hero-bg.png");
+    background-size: cover;
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    transition: transform 0.4s;
 }
 
-*/
-.blogs .blog__1>p,
-.blogs .blog__2>p,
-.blogs .blog__3>p {
+.blogs>.blogs__grid>div:hover .inner {
+    transform: scale(1.1);
+}
+
+.blogs .blog__1>span {
+    padding: 150px;
+}
+
+.blogs .blog__2>span>p,
+.blogs .blog__3>span>p {
+    padding: 75px;
+}
+
+.blogs .blog__1>span>p,
+.blogs .blog__2>span>p,
+.blogs .blog__3>span>p {
     color: var(--white);
     font-size: 30px;
     font-weight: var(--bold);
 }
 
-.blogs .blog__2,
-.blogs .blog__3 {
-    padding: 64px 80px;
-}
 
 .blogs .blog__1 {
-    /* width: 55%; */
     grid-area: blog1;
-    padding: 180px 80px;
 }
 
 
