@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
     <link rel="stylesheet" href="https://use.typekit.net/mfr2dox.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Owl carousal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Owl carousal -->
     <title>Travelo</title>
 </head>
 
-<body>
+<body onload="index()">
     <header class="header">
         <div class="nav-container">
             <div class="logo">
@@ -46,7 +45,6 @@
     </header>
     <main>
         <section class="section hero">
-            <div class="banner__img"></div>
             <div class="banner__content">
                 <h1>Travel To explore</h1>
                 <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore
@@ -62,22 +60,23 @@
                     <p>Pay through our application and save thousands and get amazing rewards </p>
                 </div>
                 <div>
-                    <img src="./images/hero_img-1.png" alt="hero-img">
-                    <h3>Get Best Prices
-                        Guarantee </h3>
-                    <p>Pay through our application and save thousands and get amazing rewards </p>
+                    <img src="./images/hero_img-2.png" alt="hero-img">
+                    <h3>Covid Safe
+                        Environment</h3>
+                    <p>We have all the curated hotels that have all the precaution for a corvid
+                        safe environment</p>
                 </div>
                 <div>
-                    <img src="./images/hero_img-1.png" alt="hero-img">
-                    <h3>Get Best Prices
-                        Guarantee </h3>
-                    <p>Pay through our application and save thousands and get amazing rewards </p>
+                    <img src="./images/hero_img-3.png" alt="hero-img">
+                    <h3>Flexible Payment
+                        Option </h3>
+                    <p>Enjoy the flexible payment through our app and get rewards on every payment </p>
                 </div>
                 <div>
-                    <img src="./images/hero_img-1.png" alt="hero-img">
-                    <h3>Get Best Prices
-                        Guarantee </h3>
-                    <p>Pay through our application and save thousands and get amazing rewards </p>
+                    <img src="./images/hero_img-4.png" alt="hero-img">
+                    <h3>Find The Best
+                        Near You</h3>
+                    <p>Find the best hotels and places to visit near you in a single click </p>
                 </div>
             </div>
         </section>
@@ -96,9 +95,47 @@
 
                         <img src="./images/Singapore.jpg" alt="destination">
                     </div>
-                    <h3>Singapore0</h3>
+                    <h3>Singapore</h3>
                     <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
                         Southeast Asia.</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="weekend">
+                    <div class="image">
+                        <img src="./images/Thailand.png" alt="destination">
+                    </div>
+                    <h3>Thailand</h3>
+                    <p>Thailand is a Southeast Asian country. It's known for tropical beaches, opulent royal palaces</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="weekend">
+                    <div class="image">
+
+                        <img src="./images/paris.jpg" alt="destination">
+                    </div>
+                    <h3>Paris</h3>
+                    <p>Paris, France's capital, is a major European city and a global center for art, fashion,
+                        gastronomy and culture.</p>
                     <div class="options">
                         <div class="services">
                             <div>
@@ -116,9 +153,85 @@
 
                         <img src="./images/Singapore.jpg" alt="destination">
                     </div>
-                    <h3>Singapore1</h3>
-                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
-                        Southeast Asia.</p>
+                    <h3>New Zealand</h3>
+                    <p>New Zealand is an island country in the southwestern Pacific Ocean. It consists of two main
+                        landmasses</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="weekend">
+                    <div class="image">
+                        <img src="./images/bora.jpg" alt="destination">
+                    </div>
+                    <h3>Bora Bora</h3>
+                    <p>Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia. Surrounded by
+                        sand</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="weekend">
+                    <div class="image">
+                        <img src="./images/london.jpg" alt="destination">
+                    </div>
+                    <h3>London </h3>
+                    <p>London, the capital of England and the United Kingdom, is a 21st-century city with history
+                        stretching</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="package">
+                    <div class="image">
+                        <img src="./images/kerala.jpg" alt="destination">
+                    </div>
+                    <h3>London </h3>
+                    <p>London, the capital of England and the United Kingdom, is a 21st-century city with history
+                        stretching</p>
+                    <div class="options">
+                        <div class="services">
+                            <div>
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                                <img src="./images/services-1.png" alt="services">
+                            </div>
+                            <span>1000km</span>
+                        </div>
+                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
+                    </div>
+                </div>
+                <div class="card" data-item="package">
+                    <div class="image">
+                        <img src="./images/london.jpg" alt="destination">
+                    </div>
+                    <h3>London </h3>
+                    <p>London, the capital of England and the United Kingdom, is a 21st-century city with history
+                        stretching</p>
                     <div class="options">
                         <div class="services">
                             <div>
@@ -133,12 +246,11 @@
                 </div>
                 <div class="card" data-item="group">
                     <div class="image">
-
-                        <img src="./images/Singapore.jpg" alt="destination">
+                        <img src="./images/london.jpg" alt="destination">
                     </div>
-                    <h3>Singapore2</h3>
-                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
-                        Southeast Asia.</p>
+                    <h3>London </h3>
+                    <p>London, the capital of England and the United Kingdom, is a 21st-century city with history
+                        stretching</p>
                     <div class="options">
                         <div class="services">
                             <div>
@@ -153,12 +265,11 @@
                 </div>
                 <div class="card" data-item="long">
                     <div class="image">
-
-                        <img src="./images/Singapore.jpg" alt="destination">
+                        <img src="./images/bora.jpg" alt="destination">
                     </div>
-                    <h3>Singapore3</h3>
-                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
-                        Southeast Asia.</p>
+                    <h3>London </h3>
+                    <p>London, the capital of England and the United Kingdom, is a 21st-century city with history
+                        stretching</p>
                     <div class="options">
                         <div class="services">
                             <div>
@@ -173,32 +284,11 @@
                 </div>
                 <div class="card" data-item="long">
                     <div class="image">
-
-                        <img src="./images/Singapore.jpg" alt="destination">
+                        <img src="./images/newzeeland.jpg" alt="destination">
                     </div>
-                    <h3>Singapore4</h3>
-                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
-                        Southeast Asia.</p>
-                    <div class="options">
-                        <div class="services">
-                            <div>
-                                <img src="./images/services-1.png" alt="services">
-                                <img src="./images/services-1.png" alt="services">
-                                <img src="./images/services-1.png" alt="services">
-                            </div>
-                            <span>1000km</span>
-                        </div>
-                        <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
-                    </div>
-                </div>
-                <div class="card" data-item="weekend">
-                    <div class="image">
-
-                        <img src="./images/Singapore.jpg" alt="destination">
-                    </div>
-                    <h3>Singapore5</h3>
-                    <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
-                        Southeast Asia.</p>
+                    <h3>London </h3>
+                    <p>London, the capital of England and the United Kingdom, is a 21st-century city with history
+                        stretching</p>
                     <div class="options">
                         <div class="services">
                             <div>
@@ -241,23 +331,68 @@
             </div>
         </section>
 
-        <section class="section customers">
+        <section class="section customers ">
             <h1>Happy
                 Customers</h1>
-            <div class="content">
-                <div class="desc">
-                    <img class="quote" src="./images/quote.png" alt="quote">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ultricies mi eget mauris pharetra. Amet risus nullam eget felis
-                        eget nunc lobortis. Purus in massa tempor nec. Porta nibh venenatis cras sed. Viverra ipsum nunc
-                        aliquet bibendum enim. Risus pretium quam vulputate dignissim suspendisse in. Non quam lacus
-                        suspendisse faucibus interdum posuere lorem ipsum dolor. Facilisi cras fermentum odio eu feugiat
-                        pretium nibh ipsum. Risus sed vulputate odio ut enim blandit volutpat maecenas. Netus et
-                        malesuada fames ac turpis egestas. Sed arcu non odio euismod lacinia at quis risus sed. </p>
-                    <div class="user">
-                        <img src="./images/user_1.png" alt="user">
-                        <p>Shalini Singh</p>
-                        <p>Project Manger flyhigh</p>
+            <div class="owl-carousel owl-theme">
+                <div class="content">
+                    <div class="desc">
+                        <img class="quote" src="./images/quote.png" alt="quote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ultricies mi eget mauris pharetra. Amet risus nullam eget
+                            felis
+                            eget nunc lobortis. Purus in massa tempor nec. Porta nibh venenatis cras sed. Viverra ipsum
+                            nunc
+                            aliquet bibendum enim. Risus pretium quam vulputate dignissim suspendisse in. Non quam lacus
+                            suspendisse faucibus interdum posuere lorem ipsum dolor. Facilisi cras fermentum odio eu
+                            feugiat
+                            pretium nibh ipsum. Risus sed vulputate odio ut enim blandit volutpat maecenas. Netus et
+                            malesuada fames ac turpis egestas. Sed arcu non odio euismod lacinia at quis risus sed. </p>
+                        <div class="user">
+                            <img src="./images/user_1.png" alt="user">
+                            <p>Shalini Singh</p>
+                            <p>Project Manger flyhigh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="desc">
+                        <img class="quote" src="./images/quote.png" alt="quote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ultricies mi eget mauris pharetra. Amet risus nullam eget
+                            felis
+                            eget nunc lobortis. Purus in massa tempor nec. Porta nibh venenatis cras sed. Viverra ipsum
+                            nunc
+                            aliquet bibendum enim. Risus pretium quam vulputate dignissim suspendisse in. Non quam lacus
+                            suspendisse faucibus interdum posuere lorem ipsum dolor. Facilisi cras fermentum odio eu
+                            feugiat
+                            pretium nibh ipsum. Risus sed vulputate odio ut enim blandit volutpat maecenas. Netus et
+                            malesuada fames ac turpis egestas. Sed arcu non odio euismod lacinia at quis risus sed. </p>
+                        <div class="user">
+                            <img src="./images/user_1.png" alt="user">
+                            <p>Shalini Singh</p>
+                            <p>Project Manger flyhigh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="desc">
+                        <img class="quote" src="./images/quote.png" alt="quote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ultricies mi eget mauris pharetra. Amet risus nullam eget
+                            felis
+                            eget nunc lobortis. Purus in massa tempor nec. Porta nibh venenatis cras sed. Viverra ipsum
+                            nunc
+                            aliquet bibendum enim. Risus pretium quam vulputate dignissim suspendisse in. Non quam lacus
+                            suspendisse faucibus interdum posuere lorem ipsum dolor. Facilisi cras fermentum odio eu
+                            feugiat
+                            pretium nibh ipsum. Risus sed vulputate odio ut enim blandit volutpat maecenas. Netus et
+                            malesuada fames ac turpis egestas. Sed arcu non odio euismod lacinia at quis risus sed. </p>
+                        <div class="user">
+                            <img src="./images/user_1.png" alt="user">
+                            <p>Shalini Singh</p>
+                            <p>Project Manger flyhigh</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -281,23 +416,8 @@
             </ul>
         </div>
     </footer>
-    <script>
-        var images = ["about_hero-bg.jpg", "hero-bg.png"];
-        $(function () {
-            var i = 0;
-            $(".hero").css("background-image", "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(images/" + images[i] + ")");
-            setInterval(function () {
-                i++;
-                if (i == images.length) {
-                    i = 0;
-                }
-                // $(".hero").fadeOut("fast", function () {
-                $(".hero").css("background-image", "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(images/" + images[i] + ")");
-                // $(this).fadeIn("fast");
-                // });
-            }, 3000);
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <script src="./js/script.js"></script>
 
 </body>

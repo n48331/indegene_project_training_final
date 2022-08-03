@@ -27,8 +27,6 @@
 
 }
 
-
-
 *,
 *::before,
 *::after {
@@ -211,6 +209,7 @@ nav ul li a:is(:hover, :focus) {
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     padding: 150px 50px;
     color: var(--white);
     border-radius: 10px;
@@ -508,41 +507,42 @@ nav ul li a:is(:hover, :focus) {
     margin: 80px 0;
 }
 
-.customers>.content {
-
+.customers .content {
     background: url("../images/customer_1.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
-.customers>.content>.desc {
+.customers .content>.desc {
     background-color: #ffffffac;
     width: 50%;
     position: relative;
     padding: 170px 30px 170px 57px;
 }
 
-.customers>.content>.desc>p {
+.customers .content>.desc>p {
     font-size: 26px;
     margin: 0 auto;
 }
 
-.customers>.content>.desc>.quote {
+.customers .content>.desc>.quote {
     width: 53px;
 }
 
-.customers>.content>.desc>.user {
+.customers .content>.desc>.user {
     width: 100%;
     margin: 20px 0 70px 0;
 
 }
 
-.customers>.content>.desc>.user>img {
+.customers .content>.desc>.user>img {
     width: 8%;
     float: left;
 
 }
 
 
-.customers>.content>.desc>.user p {
+.customers .content>.desc>.user p {
     float: left;
     width: 60%;
     margin-left: 15px;
@@ -551,16 +551,29 @@ nav ul li a:is(:hover, :focus) {
 /* ========================= About ============================*/
 .about__hero {
     width: 95%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/about_hero-bg.jpg");
     text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     padding: 200px 50px;
     color: var(--white);
     border-radius: 10px;
     margin: 100px auto;
 }
+
+.about__hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/about_hero-bg.jpg");
+}
+
+.contact__hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contact_hero-bg.jpg");
+
+}
+
+.about__hero-bg,
+.contact__hero-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 .about__hero>h1 {
     font-size: var(--h-fs);
@@ -572,7 +585,16 @@ nav ul li a:is(:hover, :focus) {
 .about__hero>a {
     display: inline;
     font-size: var(--hero-h);
+    color: rgb(207,
+            207,
+            207);
     padding: 0 10px;
+    transition: all .5s;
+}
+
+.about__hero>a:hover {
+    font-size: 28px;
+    font-weight: var(--bold);
     color: var(--white);
 }
 
@@ -674,11 +696,23 @@ nav ul li a:is(:hover, :focus) {
     float: left;
     width: 26%;
     margin: 8px;
-    background: url("../images/team-1.jpg");
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     height: 450px;
+}
+
+.team>.cards>div:nth-child(1) {
+    background: url("../images/team-1.jpg");
+}
+
+.team>.cards>div:nth-child(2) {
+    background: url("../images/team-2.jpg");
+}
+
+.team>.cards>div:nth-child(3) {
+    background: url("../images/team-3.jpg");
 }
 
 .team>.cards>div>div {
@@ -788,6 +822,15 @@ nav ul li a:is(:hover, :focus) {
 }
 
 /* CONTACT */
+.error {
+    color: rgb(254, 57, 57);
+
+}
+
+.valid {
+    outline: 2px solid lightgreen;
+}
+
 .map {
     width: 95%;
     margin: 0 auto;
@@ -839,7 +882,8 @@ input {
     float: left;
     width: 45%;
     padding: 15px;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    position: relative;
 }
 
 input:nth-of-type(even) {
@@ -999,11 +1043,11 @@ button {
         margin: 50px 0;
     }
 
-    .customers>.content>.desc>p {
+    .customers .content>.desc>p {
         font-size: 24px;
     }
 
-    .customers>.content>.desc>.quote {
+    .customers .content>.desc>.quote {
         width: 48px;
     }
 
@@ -1044,9 +1088,9 @@ button {
 @media only screen and (max-width: 992px) {
     :root {
         /* Text */
-        --h-fs: 70px;
+        --h-fs: 60px;
         --banner-h: 40px;
-        --banner-p: 26px;
+        --banner-p: 24px;
         --hero-h: 18px;
         --hero-fs: 15px;
         --dest-fs: 26px;
@@ -1060,20 +1104,20 @@ button {
     }
 
     /* Happy customers */
-    .customers>.content {
+    .customers .content {
 
         background: url("../images/customer_1.jpg");
     }
 
-    .customers>.content>.desc {
+    .customers .content>.desc {
         width: 50%;
     }
 
-    .customers>.content>.desc>p {
+    .customers .content>.desc>p {
         font-size: 18px;
     }
 
-    .customers>.content>.desc>.quote {
+    .customers .content>.desc>.quote {
         width: 30px;
     }
 
@@ -1131,9 +1175,9 @@ button {
 @media only screen and (max-width: 768px) {
     :root {
         /* Text */
-        --h-fs: 70px;
+        --h-fs: 50px;
         --banner-h: 40px;
-        --banner-p: 26px;
+        --banner-p: 20px;
         --hero-h: 18px;
         --hero-fs: 15px;
         --dest-fs: 26px;
@@ -1197,21 +1241,21 @@ button {
     }
 
     /* Happy customers */
-    .customers>.content {
+    .customers .content {
         padding-top: 400px;
-        background: url("../images/customer_1.jpg");
+        background-position: center;
     }
 
-    .customers>.content>.desc {
+    .customers .content>.desc {
         padding: 50px 30px 50px 57px;
         width: 100%;
     }
 
-    .customers>.content>.desc>p {
+    .customers .content>.desc>p {
         font-size: 18px;
     }
 
-    .customers>.content>.desc>.quote {
+    .customers .content>.desc>.quote {
         width: 30px;
     }
 
@@ -1377,6 +1421,11 @@ button {
         width: 95%;
     }
 
+    .journey>.content>div {
+        font-size: 20px;
+        line-height: 120%;
+        padding: 50px 20px 30px 20px;
+    }
 }
 
 @media only screen and (max-width: 575px) {
