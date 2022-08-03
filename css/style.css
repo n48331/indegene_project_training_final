@@ -307,7 +307,7 @@ nav ul li a:is(:hover, :focus) {
     margin: var(--center);
 }
 
-.destination>.cards>div.active {
+/* .destination>.cards>div.active {
     width: 32%;
     float: left;
     margin: 20px .6%;
@@ -315,11 +315,33 @@ nav ul li a:is(:hover, :focus) {
 
 }
 
-.destination>.cards>div.delete {
+*/
+.destination>.cards>div.active {
+    width: 30%;
+    margin: 20px .6%;
+    float: left;
+    opacity: 1;
+    transform: scale(1);
+    transition: .5s ease all;
+
+}
+
+/* .destination>.cards>div.delete {
     width: 0%;
     padding: 0;
     display: none;
     transition: all 0.5s ease;
+} */
+.destination>.cards>div.delete {
+    float: left;
+    opacity: 0;
+    transform: scale(0);
+    transition: .5s ease all;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0
 }
 
 .destination>.cards>.card>h3 {
