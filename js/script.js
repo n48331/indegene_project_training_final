@@ -23,3 +23,35 @@
     });
   }); // end DOM ready
 })(jQuery); // end jQuery
+var sortBtn = document.querySelector(".tabs").children;
+var places = document.querySelector(".destination div.cards").children;
+document.getElementById("default-filter").classList.add("current");
+var default_filter = document
+  .getElementById("default-filter")
+  .getAttribute("data-target");
+for (var k = 0; k < places.length; k++) {
+  places[k].classList.remove("active");
+  places[k].classList.add("delete");
+  if (places[k].getAttribute("data-item") == default_filter) {
+    places[k].classList.remove("delete");
+    places[k].classList.add("active");
+  }
+}
+for (var i = 0; i < sortBtn.length; i++) {
+  sortBtn[i].addEventListener("click", function () {
+    for (var j = 0; j < sortBtn.length; j++) {
+      sortBtn[j].classList.remove("current");
+    }
+    this.classList.add("current");
+    var targetData = this.getAttribute("data-target");
+    for (var k = 0; k < places.length; k++) {
+      places[k].classList.remove("active");
+      places[k].classList.add("delete");
+
+      if (places[k].getAttribute("data-item") == targetData) {
+        places[k].classList.remove("delete");
+        places[k].classList.add("active");
+      }
+    }
+  });
+}

@@ -277,7 +277,7 @@ nav ul li a:is(:hover, :focus) {
     overflow: auto;
 }
 
-.destination>.tabs>a {
+.destination>.tabs>li {
     font-size: var(--dest-fs);
     float: left;
     width: 25%;
@@ -288,22 +288,32 @@ nav ul li a:is(:hover, :focus) {
     border-bottom: 1.5px solid rgba(128, 128, 128, 0.52);
 }
 
-.destination>.tabs>a:is(:hover, :focus) {
+.destination>.tabs>li.current,
+.destination>.tabs>li:is(:hover, :focus) {
     border-color: var(--black);
     border-width: 5px;
     font-weight: var(--semibold);
     opacity: 1;
 }
 
+
 .destination>.cards {
     margin: var(--center);
 }
 
-.destination>.cards>.card {
+.destination>.cards>div.active {
     width: 32%;
     float: left;
     margin: 20px .6%;
+    transition: all 0.5s ease;
 
+}
+
+.destination>.cards>div.delete {
+    width: 0%;
+    padding: 0;
+    display: none;
+    transition: all 0.5s ease;
 }
 
 .destination>.cards>.card>h3 {
@@ -313,10 +323,23 @@ nav ul li a:is(:hover, :focus) {
 
 }
 
-.destination>.cards>.card>img {
+.destination>.cards>.card>.image {
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+
+}
+
+.destination>.cards>.card>.image>img:hover {
+    transform: scale(1.2);
+}
+
+.destination>.cards>.card>.image>img {
     width: 100%;
     border-radius: 15px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.4);
+    transition: all 1s;
+
 
 }
 
@@ -379,7 +402,10 @@ nav ul li a:is(:hover, :focus) {
     gap: 20px;
     grid-template-areas:
         "blog1 blog2"
-        "blog1  blog3";
+        "blog1 blog3";
+    overflow: hidden;
+    position: relative;
+
 
 }
 
@@ -400,9 +426,18 @@ nav ul li a:is(:hover, :focus) {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 15px;
+    transition: all 1s;
 
 }
 
+/* .blogs .blog__1:hover,
+.blogs .blog__2:hover,
+.blogs .blog__3:hover {
+    transform: scale(1.5);
+
+}
+
+*/
 .blogs .blog__1>p,
 .blogs .blog__2>p,
 .blogs .blog__3>p {
@@ -922,11 +957,11 @@ button {
         margin: 50px auto;
     }
 
-    .destination>.tabs>a {
+    .destination>.tabs>li {
         width: 50%;
     }
 
-    .destination>.cards>.card {
+    .destination>.cards>div.active {
         width: 48%;
 
     }
@@ -1110,7 +1145,7 @@ button {
     }
 
 
-    .destination>.tabs>a {
+    .destination>.tabs>li {
         width: 100%;
     }
 
@@ -1344,7 +1379,7 @@ button {
         padding: 20px;
     }
 
-    .destination>.cards>.card {
+    .destination>.cards>div.active {
         width: 100%;
     }
 

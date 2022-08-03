@@ -84,16 +84,19 @@
         <!-- <div class="section-spacer"></div> -->
         <section class="section destination">
             <h1>Recommended Destination</h1>
-            <div class="tabs">
-                <a href="#">The Weekend Break</a>
-                <a href="#">The Package Holiday</a>
-                <a href="#">The Group Tour</a>
-                <a href="#">Long Term Slow Travel</a>
-            </div>
+            <ul class="tabs">
+                <li id="default-filter" data-target="weekend">The Weekend Break</li>
+                <li data-target="package">The Package Holiday</li>
+                <li data-target="group">The Group Tour</li>
+                <li data-target="long">Long Term Slow Travel</li>
+            </ul>
             <div class="cards">
-                <div class="card">
-                    <img src="./images/Singapore.jpg" alt="destination">
-                    <h3>Singapore</h3>
+                <div class="card" data-item="weekend">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore0</h3>
                     <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
                         Southeast Asia.</p>
                     <div class="options">
@@ -108,9 +111,12 @@
                         <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="./images/Singapore.jpg" alt="destination">
-                    <h3>Singapore</h3>
+                <div class="card" data-item="weekend">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore1</h3>
                     <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
                         Southeast Asia.</p>
                     <div class="options">
@@ -125,9 +131,12 @@
                         <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="./images/Singapore.jpg" alt="destination">
-                    <h3>Singapore</h3>
+                <div class="card" data-item="group">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore2</h3>
                     <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
                         Southeast Asia.</p>
                     <div class="options">
@@ -142,9 +151,12 @@
                         <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="./images/Singapore.jpg" alt="destination">
-                    <h3>Singapore</h3>
+                <div class="card" data-item="long">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore3</h3>
                     <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
                         Southeast Asia.</p>
                     <div class="options">
@@ -159,9 +171,12 @@
                         <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="./images/Singapore.jpg" alt="destination">
-                    <h3>Singapore</h3>
+                <div class="card" data-item="long">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore4</h3>
                     <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
                         Southeast Asia.</p>
                     <div class="options">
@@ -176,9 +191,12 @@
                         <div class="prize"><span>₹ 38,800</span> <span>Approx 2 night trip</span></div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="./images/Singapore.jpg" alt="destination">
-                    <h3>Singapore</h3>
+                <div class="card" data-item="weekend">
+                    <div class="image">
+
+                        <img src="./images/Singapore.jpg" alt="destination">
+                    </div>
+                    <h3>Singapore5</h3>
                     <p>Singapore, officially the Republic of Singapore, is a sovereign island city-state in maritime
                         Southeast Asia.</p>
                     <div class="options">
@@ -195,13 +213,18 @@
                 </div>
             </div>
         </section>
-        <section class="section blogs">
+        <style>
+
+        </style>
+        <section id="blog" class="section blogs">
             <h1>Blogs</h1>
             <div class="blogs__grid">
                 <div class="blog__1">
+                    <!-- <span class="inner"> -->
                     <p>The Ultimate Guide
                         to Climbing
                         Mount Kilimanjaro</p>
+                    <!-- </span> -->
                 </div>
                 <div class="blog__2">
                     <p>
