@@ -482,18 +482,18 @@ nav ul li a:is(:hover, :focus) {
     transform: scale(1.1);
 }
 
-.blogs .blog__1>span {
+.blogs .blog__1>div {
     padding: 150px;
 }
 
-.blogs .blog__2>span>p,
-.blogs .blog__3>span>p {
+.blogs .blog__2>div>p,
+.blogs .blog__3>div>p {
     padding: 75px;
 }
 
-.blogs .blog__1>span>p,
-.blogs .blog__2>span>p,
-.blogs .blog__3>span>p {
+.blogs .blog__1>div>p,
+.blogs .blog__2>div>p,
+.blogs .blog__3>div>p {
     color: var(--white);
     font-size: 30px;
     font-weight: var(--bold);
