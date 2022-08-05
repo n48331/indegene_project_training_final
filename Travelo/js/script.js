@@ -1,8 +1,3 @@
-ScrollReveal().reveal(".section", {
-  delay: 375,
-  duration: 500,
-  reset: true,
-});
 (function ($) {
   $(function () {
     $("nav ul li a:not(:only-child)").click(function (e) {
