@@ -95,7 +95,7 @@ function contact() {
           minlength: 4,
         },
         lname: {
-          required: true,
+          required: false,
           minlength: 4,
         },
         email: {
@@ -134,10 +134,12 @@ function contact() {
           minlength: "10 digits is required",
           maxlength: "Not valid number.Enter only 10 digits",
         },
-        message: {},
+        message: {
+          required: "Write some message",
+        },
       },
 
-      errorElement: "li",
+      errorElement: "span",
       errorPlacement: function (error, element) {
         var placement = $(element).data("error");
 
@@ -150,6 +152,7 @@ function contact() {
     });
   });
 }
+
 function about() {
   function counter(id, start, end, duration) {
     let obj = document.getElementById(id),

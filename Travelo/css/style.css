@@ -43,13 +43,7 @@ a {
     text-decoration: none;
 }
 
-a,
-img,
-span,
-input,
-button {
-    display: block;
-}
+
 
 
 
@@ -887,8 +881,12 @@ nav ul li a:is(:hover, :focus) {
 }
 
 /* CONTACT */
-.error {
-    color: rgb(254, 57, 57);
+
+span.error {
+    color: rgb(255, 72, 0);
+    float:right;
+    width: 100%;
+
 
 }
 
@@ -948,7 +946,6 @@ input {
     width: 45%;
     padding: 15px;
     margin: 10px 0;
-    position: relative;
 }
 
 input:nth-of-type(even) {
