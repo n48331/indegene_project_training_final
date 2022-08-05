@@ -1,28 +1,27 @@
+ScrollReveal().reveal(".section", {
+  delay: 375,
+  duration: 500,
+  reset: true,
+});
 (function ($) {
-  // Begin jQuery
   $(function () {
-    // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
     $("nav ul li a:not(:only-child)").click(function (e) {
       $(this).siblings(".nav-dropdown").toggle();
-      // Close one dropdown when selecting another
+
       $(".nav-dropdown").not($(this).siblings()).hide();
       e.stopPropagation();
     });
-    // Clicking away from dropdown will remove the dropdown class
     $("html").click(function () {
       $(".nav-dropdown").hide();
     });
-    // Toggle open and close nav styles on click
     $("#nav-toggle").click(function () {
       $("nav ul").slideToggle();
     });
-    // Hamburger to X toggle
     $("#nav-toggle").on("click", function () {
       this.classList.toggle("active");
     });
-  }); // end DOM ready
-})(jQuery); // end jQuery
+  });
+})(jQuery);
 function index() {
   var sortBtn = document.querySelector(".tabs").children;
   var places = document.querySelector(".destination div.cards").children;
@@ -81,10 +80,9 @@ function index() {
 }
 function contact() {
   // Contact US
-  $("form").submit(function () {
-    if($('input').val()!=='')
-    alert("Submitted");
-  });
+  // $("form").submit(function () {
+  //   if ($("input").val() !== "") alert("Submitted");
+  // });
   $(document).ready(function () {
     $("#contact__form").validate({
       errorClass: "error fail-alert",
@@ -104,6 +102,7 @@ function contact() {
         },
 
         phone: {
+          required: true,
           number: false,
           minlength: 10,
           maxlength: 10,
@@ -131,6 +130,7 @@ function contact() {
         },
 
         phone: {
+          required: "Your phone number is required",
           minlength: "10 digits is required",
           maxlength: "Not valid number.Enter only 10 digits",
         },
@@ -139,15 +139,18 @@ function contact() {
         },
       },
 
-      errorElement: "span",
+      errorElement: "label",
       errorPlacement: function (error, element) {
-        var placement = $(element).data("error");
-
-        if (placement) {
-          $(placement).append(error);
-        } else {
-          error.insertBefore(element);
-        }
+        if (element.attr("name") == "fname") error.insertAfter(".fname-error");
+        else if (element.attr("name") == "lname")
+          error.insertAfter(".lname-error");
+        else if (element.attr("name") == "email")
+          error.insertAfter(".email-error");
+        else if (element.attr("name") == "phone")
+          error.insertAfter(".phone-error");
+        else if (element.attr("name") == "message")
+          error.insertAfter(".message-error");
+        else error.insertAfter(element);
       },
     });
   });

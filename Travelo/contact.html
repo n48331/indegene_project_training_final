@@ -63,8 +63,8 @@
                     <p>Time Travel Used To Be Thought Of As Just Science Fiction, But Einstein’s General Theory Of
                         Relativity Allows For The Possibility That We Could Warp Space-Time So Much That You Could Go
                         Off In A Rocket And Return Before You Set Out.</p><br>
-                    <p>9870 St Vincent Place,</p>
-                    <p> Glasgow, DC 45 Fr 45.</p><br>
+                    <p><b>9870 St Vincent Place,</b></p>
+                    <p><b>Glasgow, DC 45 Fr 45.</b></p><br>
                     <p>Freephone: +1 800559 6580</p>
                     <p>Telephone: +1 800 603 6035</p>
                     <p>FAX: +1 800 889 9898</p>
@@ -72,11 +72,31 @@
                 </div>
                 <div class="form">
                     <form autocomplete="off" id="contact__form">
-                        <input id="fname" name="fname" type="text" placeholder="First Name" required>
-                        <input id="lname" name="lname" type="text" placeholder="Last Name (Optional)">
-                        <input id="email" name="email" type="email" placeholder="Your Email" required>
-                        <input id="phone" name="phone" type="number" placeholder="Phone Number">
-                        <textarea placeholder="Your message" name="message" id="message" cols="30" rows="10"></textarea>
+                        <div>
+                            <label class="fname-error" for="fname">&nbsp;</label>
+                            <input id="fname" name="fname" type="text" placeholder="First Name" required>
+                        </div>
+                        <div>
+                            <label class="lname-error" for="fname">&nbsp;</label>
+                            <input id="lname" name="lname" type="text" placeholder="Last Name (Optional)">
+
+                        </div>
+                        <div>
+                            <label class="email-error" for="fname">&nbsp;</label>
+
+                            <input id="email" name="email" type="email" placeholder="Your Email" required>
+                        </div>
+                        <div>
+
+                            <label class="phone-error" for="fname">&nbsp;</label>
+                            <input id="phone" name="phone" type="number" placeholder="Phone Number" required>
+                        </div>
+                        <div class="textarea">
+                            <label class="message-error" for="message">&nbsp;</label>
+                            <textarea placeholder="Your message" name="message" id="message" cols="30"
+                                rows="10"></textarea>
+                        </div>
+
                         <button type="submit">SEND MESSAGE</button>
                     </form>
                 </div>

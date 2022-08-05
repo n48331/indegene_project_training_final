@@ -77,33 +77,33 @@ html {
     z-index: 99;
 
 }
-#travel{
+
+#travel {
     text-transform: uppercase;
-   background-image: linear-gradient(
-     -225deg,
-     #F5FCFF 0%,
-     #DBF3FA 29%,
-     #B7E9F7 67%,
-     #92DFF3 85%,
-     #F5FCFF 100%
-   );
-   background-size: auto auto;
-   background-clip: border-box;
-   background-size: 200% auto;
-   color: #fff;
-   background-clip: text;
-   text-fill-color: transparent;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   animation: textclip 2s linear infinite;
-   display: inline-block;
- }
- 
- @keyframes textclip {
-   to {
-     background-position: 200% center;
-   }
- }    
+    background-image: linear-gradient(-225deg,
+            #F5FCFF 0%,
+            #DBF3FA 29%,
+            #B7E9F7 67%,
+            #92DFF3 85%,
+            #F5FCFF 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
 .logo {
     position: absolute;
     padding: 20px;
@@ -224,17 +224,58 @@ nav ul li a:is(:hover, :focus) {
 
 
 .hero {
+    position: relative;
     width: 95%;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/hero-bg.png");
     text-align: center;
-    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
     padding: 150px 50px;
     color: var(--white);
     border-radius: 10px;
     margin: 100px auto;
     transition: all .5s;
+    animation: changeBg 12s infinite;
+}
+
+
+@keyframes changeBg {
+    0% {
+        background-image: url('../images/hero-bg-2.png');
+    }
+
+    25% {
+        background-image: url('../images/hero-bg-3.png');
+    }
+
+    50% {
+        background-image: url('../images/hero-bg-4.png');
+    }
+
+    75% {
+        background-image: url('../images/hero-bg-5.png');
+    }
+
+    100% {
+        background-image: url('../images/hero-bg-6.png');
+    }
+}
+
+.hero>.over__hero {
+    position: absolute;
+    background-color: var(--black);
+    opacity: .3;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.hero>.banner__content {
+    position: relative;
+
 }
 
 .hero .banner__content h1 {
@@ -245,9 +286,12 @@ nav ul li a:is(:hover, :focus) {
 .hero .banner__content p {
     font-size: var(--banner-p);
 
+
 }
 
 .hero .hero__cards {
+    position: relative;
+
     width: 100%;
 
 }
@@ -272,6 +316,21 @@ nav ul li a:is(:hover, :focus) {
 .hero .hero__cards div>img {
     width: 60px;
     margin: 20px auto;
+    animation: flip-anim 2s linear infinite;
+}
+
+@keyframes flip-anim {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .hero .hero__cards div>h3 {
@@ -714,6 +773,7 @@ nav ul li a:is(:hover, :focus) {
     width: 100%;
     color: var(--black-2);
     padding: 30px 0;
+
 }
 
 .team>h1 {
@@ -739,6 +799,7 @@ nav ul li a:is(:hover, :focus) {
     width: 26%;
     margin: 8px;
     height: 450px;
+    transition: all .6s;
 }
 
 .team>.cards>div:hover .team>.cards>div>div {
@@ -884,7 +945,7 @@ nav ul li a:is(:hover, :focus) {
 
 span.error {
     color: rgb(255, 72, 0);
-    float:right;
+    float: right;
     width: 100%;
 
 
@@ -938,30 +999,81 @@ span.error {
 
 .contact__form>.contacts>.form {
     width: 50%;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
-input {
+form>div {
     float: left;
-    width: 45%;
+    width: 50%;
+}
+
+form>div:nth-child(5) {
+    float: left;
+    width: 100%;
+}
+
+form>div>label {
+    color: red;
+}
+
+form>div>input,
+form>div>textarea {
+    display: block;
     padding: 15px;
-    margin: 10px 0;
-}
-
-input:nth-of-type(even) {
-    margin-left: 10px;
-}
-
-textarea {
-    width: 91%;
-    padding: 15px;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #B4C6EE;
+    border-radius: 3px;
+    outline: 0;
     border: 0;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.75);
+}
+
+form>div>input {
+    width: 95%;
+}
+
+form>div>textarea {
+    width: 97%;
+}
+
+form>button {
+    border-radius: 4px;
+    background-color: #B4C6EE;
+    border: none;
+    color: #000;
+    text-align: center;
+    padding: 16px 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+    margin-top: 20px;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    width: 200px;
+
+}
+
+form>button:after {
+    content: '✅';
+    /* content: '»'; */
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+form>button:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+form>button:hover:after {
+    opacity: 1;
+    right: 10px;
 }
 
 /* START YOUR JOURNEY! */
@@ -976,8 +1088,8 @@ button {
 
 .journey>.content>div {
     float: left;
-    font-size: 25px;
-    line-height: 100%;
+    font-size: 22px;
+    line-height: 120%;
     padding: 50px 20px 30px 0;
     margin-bottom: 0px;
 }
@@ -998,6 +1110,7 @@ button {
 
 .journey>.content>div:nth-child(1)>p {
     width: 90%;
+
 }
 
 .journey>.content>div:nth-child(2),
@@ -1214,13 +1327,9 @@ button {
     }
 
     /* MEET OUR TEAM */
-    .team>.cards {
-        padding: 40px 0 0 20px;
-    }
 
-    .team>.cards>div {
-        width: 30%;
-        height: 450px;
+    .team>.cards {
+        padding: 80px 10px;
     }
 
 
@@ -1470,19 +1579,7 @@ button {
         padding-left: 30px;
     }
 
-    input {
-        width: 95%;
-        padding: 15px;
-        margin-bottom: 10px;
-    }
 
-    input:nth-of-type(even) {
-        margin-left: 0px;
-    }
-
-    textarea {
-        width: 95%;
-    }
 
     .journey>.content>div {
         font-size: 20px;
@@ -1538,10 +1635,21 @@ button {
     .steps>div>ul>li>img {
         left: 35%;
     }
+
     .blogs .blog__1>div {
         padding: 100px;
     }
 
+    form>div {
+        float: left;
+        width: 100%;
+    }
+
+    form>div>textarea,
+    form>div>input {
+        width: 95%;
+        border: 2px solid gray;
+    }
 }
 
 @media screen and (min-width: 799px) {
