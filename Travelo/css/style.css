@@ -35,6 +35,21 @@
     box-sizing: border-box;
 }
 
+.ui-tooltip,
+.arrow:after {
+    background: rgb(255, 255, 255);
+}
+
+.ui-tooltip {
+    padding: 5px 10px;
+    left: 0;
+    color: black;
+    border-radius: 20px;
+    font: bold 12px "Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+}
+
 li {
     list-style: none;
 }

@@ -16,6 +16,38 @@
       this.classList.toggle("active");
     });
   });
+  $(function () {
+    $("#insta").tooltip({
+      show: null,
+      position: {
+        my: "left-25 bottom",
+        at: "left top-5",
+      },
+      open: function (event, ui) {
+        ui.tooltip.animate({ top: ui.tooltip.position().top + 5 }, "fast");
+      },
+    });
+    $("#fb").tooltip({
+      show: null,
+      position: {
+        my: "left-25 bottom",
+        at: "left top-5",
+      },
+      open: function (event, ui) {
+        ui.tooltip.animate({ top: ui.tooltip.position().top + 5 }, "fast");
+      },
+    });
+    $("#in").tooltip({
+      show: null,
+      position: {
+        my: "left-25 bottom",
+        at: "left top-5",
+      },
+      open: function (event, ui) {
+        ui.tooltip.animate({ top: ui.tooltip.position().top + 5 }, "fast");
+      },
+    });
+  });
 })(jQuery);
 function index() {
   var sortBtn = document.querySelector(".tabs").children;
