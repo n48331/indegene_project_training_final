@@ -953,7 +953,7 @@ nav ul li a:is(:hover, :focus) {
 /* CONTACT */
 
 span.error {
-    color: rgb(255, 72, 0);
+    color: #E2444F;
     float: right;
     width: 100%;
 
